@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills - Vikas Yadav</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #33ff33;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .terminal-header {
+      text-align: center;
+      font-size: 1.8rem;
+      color: #39ff14;
+      margin-top: 2rem;
+    }
+
+    .scan-line {
+      background: linear-gradient(90deg, transparent, #33ff33 40%, transparent);
+      height: 2px;
+      animation: scan 2s linear infinite;
+    }
+
+    @keyframes scan {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .section-header {
+      font-size: 1rem;
+      color: #39ff14;
+      margin: 2.5rem 0 0.75rem;
+      position: relative;
+    }
+
+    .section-header::before {
+      content: "> ";
+      color: #66ff66;
+    }
+
+    .section-separator {
+      border-bottom: 1px dashed #33ff33;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-box {
+      background-color: #1c1c1c;
+      border: 1px solid #33ff33;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    }
+
+    .skill-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #33ff33;
+    }
+
+    .skill-title {
+      color: #8aff8a;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .chip {
+      background-color: #145214;
+      padding: 0.3rem 0.6rem;
+      margin: 0.3rem;
+      display: inline-block;
+      font-size: 0.8rem;
+      border-radius: 4px;
+    }
+
+    .return-link {
+      margin-top: 3rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="terminal-header">$ nmap --scan ~/skills.txt</div>
+  <div class="scan-line mb-4"></div>
+
+  <div class="text-start mt-3 ms-3">
+    <a href="index.html" class="text-decoration-underline text-success">↩ return home</a>
+  </div>  
+
+  <div class="container">
+
+    <!-- Programming -->
+    <div class="section-header">skills --category programming</div>
+    <div class="section-separator"></div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">Python</div>
+          <div><span class="chip">Scripting</span><span class="chip">Automation</span><span class="chip">Pandas</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">SQL</div>
+          <div><span class="chip">Joins</span><span class="chip">Aggregates</span><span class="chip">Optimization</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">Shell / Bash</div>
+          <div><span class="chip">Scripting</span><span class="chip">Automation</span><span class="chip">User Mgmt</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="section-header">skills --category tools</div>
+    <div class="section-separator"></div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">Linux</div>
+          <div><span class="chip">Admin</span><span class="chip">Monitoring</span><span class="chip">CLI</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">OpenCV / Tesseract</div>
+          <div><span class="chip">OCR</span><span class="chip">Image Processing</span><span class="chip">Text Extraction</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">PowerShell</div>
+          <div><span class="chip">Scripts</span><span class="chip">Windows Admin</span><span class="chip">Task Scheduler</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data -->
+    <div class="section-header">skills --category analytics</div>
+    <div class="section-separator"></div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">Pandas</div>
+          <div><span class="chip">DataFrames</span><span class="chip">Cleaning</span><span class="chip">Exploration</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">Matplotlib</div>
+          <div><span class="chip">Plots</span><span class="chip">Visualization</span><span class="chip">Reports</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">Excel</div>
+          <div><span class="chip">Formulas</span><span class="chip">Pivot</span><span class="chip">Charts</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other -->
+    <div class="section-header">skills --category misc</div>
+    <div class="section-separator"></div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">Git</div>
+          <div><span class="chip">Version Control</span><span class="chip">CLI</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">VirtualBox</div>
+          <div><span class="chip">VMs</span><span class="chip">Snapshots</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="skill-box">
+          <div class="skill-title">VS Code</div>
+          <div><span class="chip">Extensions</span><span class="chip">Snippets</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

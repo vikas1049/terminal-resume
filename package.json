@@ -1,0 +1,15 @@
+{
+  "name": "terminal-resume",
+  "version": "1.0.0",
+  "description": "Terminal-themed interactive resume",
+  "main": "pages/index.html",
+  "scripts": {
+    "start": "open pages/index.html"
+  },
+  "author": "Vikas Yadav",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "font-awesome": "^6.5.0"
+  }
+}
