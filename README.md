@@ -17,7 +17,7 @@ A creative, Linux-terminal themed responsive personal resume website built with 
 Clone the repository and open `index.html` in your preferred browser:
 
 ```bash
-git clone https://github.com/yourusername/terminal-resume.git
+git clone https://github.com/vikas1049/terminal-resume.git
 cd terminal-resume
 open pages/index.html
 ```
