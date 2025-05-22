@@ -134,34 +134,38 @@
 
   <script>
     const cmdInput = document.getElementById("cmdInput");
-    const output = document.getElementById("output");
-
+    const output   = document.getElementById("output");
+  
     const routes = {
-      education: "education.html",
-      experience: "experience.html",
-      projects: "projects.html",
-      skills: "skills.html",
-      certifications: "certifications.html",
-      contact: "contact.html",
-      help: "Commands: education, experience, projects, skills, certifications, contact"
+      education:      "pages/education.html",
+      experience:     "pages/experience.html",
+      projects:       "pages/projects.html",
+      skills:         "pages/skills.html",
+      certifications: "pages/certifications.html",
+      contact:        "pages/contact.html",
+      help:           "Commands: education, experience, projects, skills, certifications, contact"
     };
-
+  
     cmdInput.addEventListener("keypress", function(e) {
       if (e.key === "Enter") {
         const cmd = cmdInput.value.trim().toLowerCase();
+  
         if (routes[cmd]) {
-          if (routes[cmd].includes(".html")) {
+          if (routes[cmd].endsWith(".html")) {
             window.location.href = routes[cmd];
           } else {
             output.textContent = routes[cmd];
           }
         } else {
-          output.textContent = "Command not found. Try 'help'";
+          // unknown command → go to your 404 page
+          window.location.href = "pages/404.html";
         }
+  
         cmdInput.value = "";
       }
     });
   </script>
+  
 
 </body>
 </html>
