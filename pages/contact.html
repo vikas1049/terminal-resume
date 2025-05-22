@@ -154,6 +154,20 @@
     }
   
     window.onload = typeInit;
+
+  window.addEventListener("load", () => {
+    // Modern browsers
+    const navEntries = performance.getEntriesByType("navigation");
+    const isReload = navEntries.length && navEntries[0].type === "reload";
+    
+    // Fallback for older browsers:
+    // const isReload = performance.navigation && performance.navigation.type === 1;
+    
+    if (isReload) {
+      // Adjust the path if your pages folder is deeper
+      window.location.href = "../index.html";
+    }
+  });
   </script>
 
 </body>
