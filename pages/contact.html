@@ -25,25 +25,24 @@
       margin-top: 3rem;
       color: #39ff14;
     }
-    .typewriter {
+    #typewriter-text {
       display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid #33ff33;
       font-size: 1.2rem;
       color: #8aff8a;
-      width: 0;
-      animation:
-        typing 4s steps(38, end) forwards,
-        blink-caret 0.75s step-end infinite;
     }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 40ch }
+    
+    .cursor {
+      display: inline-block;
+      color: #33ff33;
+      margin-left: 0.2ch;
+      animation: blink 0.8s infinite;
     }
-    @keyframes blink-caret {
-      50% { border-color: transparent }
+    
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%     { opacity: 0; }
     }
+    
     .typewriter-text {
       color: #8aff8a;
       font-size: 1.2rem;
@@ -104,9 +103,8 @@
 
   <div class="header">$ whois --contact Vikas_Yadav</div>
   <div style="text-align: center;">
-    <div class="typewriter-wrapper">
-      <div class="typewriter">Initializing secure contact interface...</div>
-    </div>
+    <span id="typewriter-text"></span><span class="cursor">|</span>
+  </div>
   </div>
 
   <div class="terminal-box">
@@ -140,14 +138,22 @@
   </div>
 
   <script>
-    window.addEventListener("load", function() {
-      const typewriter = document.querySelector(".typewriter");
-      setTimeout(() => {
-        typewriter.style.animation = "none";
-        typewriter.style.width = "100%";
-        typewriter.innerText = "Secure contact interface online.";
-      }, 4000);
-    });
+    const initText  = "Initializing secure contact interface...";
+    const finalText = "Secure contact interface online..";
+    const speed     = 120;   // ms per character
+    let i = 0;
+    const el = document.getElementById("typewriter-text");
+  
+    function typeInit() {
+      if (i < initText.length) {
+        el.textContent += initText.charAt(i++);
+        setTimeout(typeInit, speed);
+      } else {
+        el.textContent = finalText;  // instant swap
+      }
+    }
+  
+    window.onload = typeInit;
   </script>
 
 </body>
